@@ -1,0 +1,54 @@
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Play, record, convert, and stream many audio and video codecs
+brew "ffmpeg-full", link: true
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick-full", link: true
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# SVG rendering tool and library
+brew "resvg"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
+# Terminal multiplexer
+brew "tmux"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Utility improving 3rd party mouse performance and functionalities
+cask "bettermouse"
+# Continuation of Clash Verge - A Clash Meta GUI based on Tauri
+cask "clash-verge-rev"
+cask "font-maple-mono-nf-cn"
+cask "font-symbols-only-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Keyboard customiser
+cask "karabiner-elements"
+# Multi-platform web browser
+cask "microsoft-edge"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Snip or pin screenshots
+cask "snipaste"
+# Open-source code editor
+cask "visual-studio-code"
+# Text input app from WeChat team for Chinese users
+cask "wetype"

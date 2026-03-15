@@ -1,0 +1,47 @@
+# general ======================================================================
+export EDITOR=vim
+export LANG=en_US.UTF-8
+
+# history ======================================================================
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS       # 不記錄重複命令
+setopt HIST_IGNORE_SPACE      # 以空格開頭的命令不記錄
+setopt SHARE_HISTORY          # 多個 terminal 共享歷史
+
+# fzf ==========================================================================
+source <(fzf --zsh)
+
+# 用 fd 替代 find（更快，自動忽略 .gitignore）
+export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type=d --hidden --strip-cwd-prefix --exclude .git'
+
+# fzf 外觀
+export FZF_DEFAULT_OPTS='
+  --height 40%
+  --layout=reverse
+  --border
+  --preview-window=right:60%
+'
+
+# zoxide (cd) ==================================================================
+eval "$(zoxide init zsh)"
+alias cd='z'
+
+# yazi =========================================================================
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd")"
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    z "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
+
+# aliases ========================================================================
+source ~/.config/zsh/aliases.zsh
+
+# starship =====================================================================
+eval "$(starship init zsh)"

@@ -5,7 +5,7 @@ Host dmit
   IdentityFile ~/.ssh/dmit_id_rsa.pem
 
 Host mac-dmit
-  Hostname localhost
+  Hostname ::1
   Port 2222
   User yono
-  ProxyJump root@64.186.224.237
+  ProxyJump dmit

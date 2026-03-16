@@ -1,0 +1,11 @@
+Host dmit
+  Hostname 64.186.224.237
+  User root
+  Port 22
+  IdentityFile ~/.ssh/dmit_id_rsa.pem
+
+Host mac-dmit
+  Hostname localhost
+  Port 2222
+  User yono
+  ProxyJump root@64.186.224.237

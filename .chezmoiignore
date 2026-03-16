@@ -1,5 +1,6 @@
 {{- if eq .chezmoi.os "windows" }}
-dot_zshenv
-dot_zprofile
-dot_config/zsh
+.config/brew
+.config/zsh
+.zprofile
+.zshenv
 {{- end }}

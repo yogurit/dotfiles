@@ -4,8 +4,14 @@ Host dmit
   Port 22
   IdentityFile ~/.ssh/dmit_id_rsa.pem
 
-Host mac-dmit
+Host itricher
+  Hostname itricher.com
+  User root
+  Port 22
+  IdentityFile ~/.ssh/vps_id_ed25519
+
+Host mac-vps
   Hostname ::1
   Port 2222
   User yono
-  ProxyJump dmit
+  ProxyJump itricher
